@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Wasm Math Test</h1>
+    <p>Check the Browser Console for the result.</p>
+
+    <script src="a.out.js"></script>
+    <script>
+        Module.onRuntimeInitialized = () => {
+            
+            const result = Module._sum_of_squares(100000000);
+            
+            console.log("Result from Wasm:", result);
+            
+        };
+    </script>
+</body>
+</html>
